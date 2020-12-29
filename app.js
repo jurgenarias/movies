@@ -26,19 +26,20 @@ d3.csv("movies.csv").then(function (data) {
     var inputElement = d3.select("#patient-form-input");
 
     // Get the value property of the input element
-    var inputValue = inputElement.property("value").toLowerCase().replace(/ /g, "");
+    var inputValue = inputElement.property("value").toLowerCase().trim();
 
-    // console.log(inputValue);
+    // console.log(inputValue.length);
     // console.log(movies);
-
-    var filteredData = movies.filter(movies => movies.actors.toLowerCase().replace(/ /g, "").includes(inputValue));
+    if (inputValue.length < 6){
+      d3.select("p").classed('noresults2', true).html("<center><strong>Please try using more than 5 characters to avoid too many results!</strong>")
+      inputValue = "Something to give no results"
+    }
+    var filteredData = movies.filter(movies => movies.actors.toLowerCase().trim().includes(inputValue));
     // console.log(filteredData.length)
-    if (filteredData.length === 0){
+    if (filteredData.length === 0 && inputValue !== "Something to give no results"){
       // console.log("a ver")
-      // d3.select("tbody").insert("tr").html("<td></td><td></td><strong>No results. Please check your spelling!</strong>")
-      
-      d3.selectAll("p").classed('noresults', true).html("<center><strong>No results. Please check your spelling!</strong>")
-
+      // d3.select("tbody").insert("tr").html("<td></td><td></td><strong>No results. Please check your spelling!</strong>") 
+      d3.select("p").classed('noresults', true).html("<center><strong>No results. Please check your spelling!</strong>")
     }
     output = _.sortBy(filteredData, 'avg_vote').reverse()
     // rating = []
