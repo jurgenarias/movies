@@ -378,12 +378,17 @@ template {
   display: none !important;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
   padding: 20px;
+}
+
+.h6{
+  padding:5px;
+  font-weight: 100;
 }
 .noresults{
   font-size:30px;
@@ -417,6 +422,8 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 1rem;
+  font-weight: 100;
+  margin-top:5px;
 }
 
 .lead {
@@ -8074,7 +8081,7 @@ button.bg-black:focus {
 
 .mr-auto,
 .mx-auto {
-  margin-right: auto !important;
+  /* margin-right: auto !important; */
 }
 
 .mb-auto,
@@ -8084,7 +8091,7 @@ button.bg-black:focus {
 
 .ml-auto,
 .mx-auto {
-  margin-left: auto !important;
+  /* margin-left: auto !important; */
 }
 
 @media (min-width: 576px) {
