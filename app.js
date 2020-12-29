@@ -18,6 +18,7 @@ d3.csv("movies.csv").then(function (data) {
   // Complete the event handler function for the form
   function runEnter() {
     d3.select("tbody").html("")
+    d3.selectAll("p").classed('noresults', true).html("")
     // Prevent the page from refreshing
     d3.event.preventDefault();
 
