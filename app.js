@@ -34,7 +34,10 @@ d3.csv("movies.csv").then(function (data) {
     // console.log(filteredData.length)
     if (filteredData.length === 0){
       // console.log("a ver")
-      d3.select("tbody").insert("tr").html("<td></td><td></td><strong>No results. Please check your spelling!</strong>")
+      // d3.select("tbody").insert("tr").html("<td></td><td></td><strong>No results. Please check your spelling!</strong>")
+      
+      d3.selectAll("p").classed('noresults', true).html("<center><strong>No results. Please check your spelling!</strong>")
+
     }
     output = _.sortBy(filteredData, 'avg_vote').reverse()
     // rating = []
