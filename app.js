@@ -48,7 +48,7 @@ d3.csv("movies.csv").then(function (data) {
       // console.log(output[i]['original_title'])
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
-      d3.select("tbody").insert("tr").html("<td>"+[i+1]+"</td>"+"<td>"+(output[i]['original_title'])
+      d3.select("tbody").insert("tr").html("<td>"+[i+1]+"</td>"+"<td>"+"<a href=https://www.imdb.com/title/"+output[i]['imdb_title_id']+" target='_blank'>"+(output[i]['original_title'])+"</a>"
       + "</td>" +"<td>" +(output[i]['avg_vote'])+"</td>" +"<td>" +(output[i]['year'])+"</td>" +"<td>" +(output[i]['description'])+"</td") }
     // var data = filteredData
     // var lines = data.split("\n"),
