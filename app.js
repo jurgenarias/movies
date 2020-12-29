@@ -27,13 +27,13 @@ d3.csv("movies.csv").then(function (data) {
     // Get the value property of the input element
     var inputValue = inputElement.property("value").toLowerCase().replace(/ /g, "");
 
-    console.log(inputValue);
+    // console.log(inputValue);
     // console.log(movies);
 
     var filteredData = movies.filter(movies => movies.actors.toLowerCase().replace(/ /g, "").includes(inputValue));
-    console.log(filteredData.length)
+    // console.log(filteredData.length)
     if (filteredData.length === 0){
-      console.log("a ver")
+      // console.log("a ver")
       d3.select("tbody").insert("tr").html("<td></td><td></td><strong>No results. Please check your spelling!</strong>")
     }
     output = _.sortBy(filteredData, 'avg_vote').reverse()
