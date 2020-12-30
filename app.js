@@ -15,12 +15,22 @@ d3.csv("movies.csv").then(function (data) {
   button.on("click", runEnter);
   form.on("submit", runEnter);
 
+  /* important! for alignment, you should make things
+ * relative to the canvas' current width/height.
+ */
+
   // Complete the event handler function for the form
   function runEnter() {
     d3.select("tbody").html("")
     d3.selectAll("p").classed('noresults', true).html("")
     // Prevent the page from refreshing
     d3.event.preventDefault();
+    // window.resizeTo(width, height);
+
+    // window.addEventListener('resize',function(){"use strict"; 
+    // window.location.reload(); });
+   // window.resizeTo(width, height);
+    // window.resizeTo(screen.width,screen.height)
 
     // Select the input element and get the raw HTML node
     var inputElement = d3.select("#patient-form-input");

@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5YCMXVCN8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5YCMXVCN8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-N5YCMXVCN8');
-</script>
+    gtag('config', 'G-N5YCMXVCN8');
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
@@ -39,23 +39,55 @@
   <!-- Navigation-->
   <!-- The video -->
 
-
   <video autoplay muted loop id="myVideo">
     <source src="assets/img/bg.mp4" type="video/mp4">
   </video>
-
+ 
 
 
   <header class="mas">
     <div class="container h-100 align-items-center">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12s">
           <div class="mx-auto">
             <br>
             <h1 class=>Find Movies!</h1>
             <h2 class=>Enter the name of an actor/actress to see his/her best movies!</h2>
             <h6>(Click <a href="https://jurgenarias.github.io/director/">here</a> to search by director instead)</h6>
+            <form id="form">
 
+              <div class="input-group input-group-newsletter">
+
+                <input class="form-control" id="patient-form-input" placeholder="Enter actor/actress..."
+                  aria-label="Enter email..." aria-describedby="submit-button">
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="boton input-group-append" id="boton">
+                  <button class="boton btn btn-secondary" type="button" id="button">Find Movies!</button>
+                </div>
+                <!-- </input> -->
+              </div>
+            </form>
+
+            <p class="noresults">
+            </p>
+            <p class="noresults2">
+            </p>
+
+            <table class="table" cellpadding="10">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Movie</th>
+                  <th scope="col">Rating</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Description</th>
+
+                </tr>
+              </thead>
+              <tbody>
           </div>
         </div>
 
@@ -67,47 +99,7 @@
     </div>
 
   </header>
-  <div class="container h-50">
-    <div class="row h-100">
 
-      <div class="col-12 my-auto">
-        <form id="form">
-
-          <div class="input-group input-group-newsletter">
-
-            <input class="form-control" id="patient-form-input" placeholder="Enter actor/actress..."
-              aria-label="Enter email..." aria-describedby="submit-button">
-              <br>
-              <br>
-              <br>
-              <br>
-              <div class="boton input-group-append" id="boton">
-              <button class="boton btn btn-secondary" type="button" id="button">Find Movies!</button>
-            </div>
-            <!-- </input> -->
-          </div>
-        </form>
-
-        <p class="noresults">
-        </p>
-        <p class="noresults2">
-        </p>
-
-        <table class="table" cellpadding="10">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Movie</th>
-              <th scope="col">Rating</th>
-              <th scope="col">Year</th>
-              <th scope="col">Description</th>
-
-            </tr>
-          </thead>
-          <tbody>
-      </div>
-    </div>
-  </div>
   <script src="app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/underscore@1.12.0/underscore-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
