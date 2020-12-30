@@ -56,6 +56,12 @@ text-align: center;
 
 } */
 
+@media only screen and
+(min-device-width : screen px) and
+(max-device-width : screen px) {
+    #id{style}
+}
+
 *,
 *::before,
 *::after {
@@ -65,6 +71,7 @@ text-align: center;
 #myVideo {
   opacity: 0.15; 
 }
+
 
 html {
   font-family: sans-serif;

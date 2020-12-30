@@ -30,7 +30,6 @@ d3.csv("movies.csv").then(function (data) {
     // window.addEventListener('resize',function(){"use strict"; 
     // window.location.reload(); });
    // window.resizeTo(width, height);
-    // window.resizeTo(screen.width,screen.height)
 
     // Select the input element and get the raw HTML node
     var inputElement = d3.select("#patient-form-input");
@@ -60,7 +59,8 @@ d3.csv("movies.csv").then(function (data) {
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
       d3.select("tbody").insert("tr").html("<td>"+[i+1]+"</td>"+"<td>"+"<a href=https://www.imdb.com/title/"+output[i]['imdb_title_id']+" target='_blank'>"+(output[i]['original_title'])+"</a>"
       + "</td>" +"<td>" +(output[i]['avg_vote'])+"</td>" +"<td>" +(output[i]['year'])+"</td>" +"<td>" +(output[i]['description'])+"</td") }
-    // var data = filteredData
+
+      // var data = filteredData
     // var lines = data.split("\n"),
         // output2 = [],
     //     i;
@@ -107,5 +107,7 @@ d3.csv("movies.csv").then(function (data) {
     // list.append("li").text(`Variance: ${variance}`);
     // list.append("li").text(`Standard Deviation: ${standardDeviation}`);
   };
+  window.resizeTo(screen.width,screen.height)
+
 
 });
